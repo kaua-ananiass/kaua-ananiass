@@ -1,16 +1,31 @@
-## Hi there 👋
+# Olá, eu sou Kauã Ananias
 
-<!--
-**kaua-ananiass/kaua-ananiass** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos independentes.
 
-Here are some ideas to get you started:
+## Tecnologias
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- Python
+- JavaScript
+- HTML
+- CSS
+- Tauri
+- Rust
+- GDevelop
+
+## O que eu desenvolvo
+
+- jogos independentes
+- pixel art
+- animação para jogos
+- interfaces visuais
+- ferramentas de automação
+- aplicações desktop
+- projetos com reconhecimento de imagem
+
+## Sobre meu trabalho
+
+Gosto de criar projetos visuais e interativos, principalmente no desenvolvimento de jogos.
+
+Trabalho com GDevelop, pixel art, animação e também desenvolvo ferramentas e aplicações quando preciso criar soluções mais personalizadas.
+
+Publico meus projetos no itch.io como **Duka Gamedev**.
