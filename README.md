@@ -1,8 +1,16 @@
-# Olá, eu sou Kauã Ananias
+# Olá, eu sou Kauã Ananias 👋
 
-Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos independentes.
+Sou um desenvolvedor apaixonado por criar jogos, visuais e projetos independentes 🎮
 
-## Tecnologias
+## 🛠️ O que eu faço
+
+- desenvolvimento de jogos
+- pixel art
+- animação para jogos
+- interfaces visuais
+- ferramentas e aplicativos personalizados
+
+## 🛠️ Tecnologias e ferramentas
 
 - Python
 - JavaScript
@@ -12,20 +20,10 @@ Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos inde
 - Rust
 - GDevelop
 
-## O que eu desenvolvo
+## 🚀 Projetos
 
-- jogos independentes
-- pixel art
-- animação para jogos
-- interfaces visuais
-- ferramentas de automação
-- aplicações desktop
-- projetos com reconhecimento de imagem
+Publico meus jogos e experimentos no itch.io como **Duka Gamedev**.
 
-## Sobre meu trabalho
+---
 
-Gosto de criar projetos visuais e interativos, principalmente no desenvolvimento de jogos.
-
-Trabalho com GDevelop, pixel art, animação e também desenvolvo ferramentas e aplicações quando preciso criar soluções mais personalizadas.
-
-Publico meus projetos no itch.io como **Duka Gamedev**.
+_Criando jogos, arte e ideias com criatividade e tecnologia._ 
