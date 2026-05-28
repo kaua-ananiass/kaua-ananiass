@@ -26,6 +26,3 @@ Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos inde
 
 Publico meus jogos e experimentos no itch.io como **Duka Gamedev**.
 
----
-
-_Criando jogos, arte e ideias com criatividade e tecnologia._ 
