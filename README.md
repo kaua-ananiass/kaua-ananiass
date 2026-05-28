@@ -1,14 +1,6 @@
 # Olá, eu sou Kauã Ananias 👋
 
-Sou um desenvolvedor apaixonado por criar jogos, visuais e projetos independentes 🎮
-
-## 🛠️ O que eu faço
-
-- desenvolvimento de jogos
-- pixel art
-- animação para jogos
-- interfaces visuais
-- ferramentas e aplicativos personalizados
+Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos independentes. 🎮
 
 ## 🛠️ Tecnologias e ferramentas
 
@@ -19,6 +11,16 @@ Sou um desenvolvedor apaixonado por criar jogos, visuais e projetos independente
 - Tauri
 - Rust
 - GDevelop
+
+## 🛠️ O que eu desenvolvo
+
+- jogos independentes
+- pixel art
+- animação para jogos
+- interfaces visuais
+- ferramentas de automação
+- aplicações desktop
+- projetos com reconhecimento de imagem
 
 ## 🚀 Projetos
 
