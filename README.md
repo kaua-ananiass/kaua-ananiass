@@ -1,4 +1,4 @@
-# Olá, eu sou Kauã Ananias 👋
+# Olá, eu sou kaua_ananiass 👋
 
 Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos independentes. 🎮
 
