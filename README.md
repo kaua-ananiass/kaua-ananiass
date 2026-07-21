@@ -1,8 +1,8 @@
-# Olá, eu sou kaua_ananiass 👋
+# Olá, eu sou kaua_ananiass 
 
 Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos independentes. 🎮
 
-## 🛠️ Tecnologias e ferramentas
+## Tecnologias e ferramentas
 
 - Python
 - JavaScript
@@ -12,7 +12,7 @@ Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos inde
 - Rust
 - GDevelop
 
-## 🛠️ O que eu desenvolvo
+## O que eu desenvolvo
 
 - jogos independentes
 - pixel art
@@ -22,7 +22,7 @@ Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos inde
 - aplicações desktop
 - projetos com reconhecimento de imagem
 
-## 🚀 Projetos
+## Projetos
 
 Publico meus jogos e experimentos no itch.io como **Duka Gamedev**.
 
