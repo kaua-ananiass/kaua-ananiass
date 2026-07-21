@@ -1,6 +1,6 @@
 # Olá, eu sou kaua_ananiass 
 
-Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos independentes. 🎮
+Desenvolvedor com foco em criação de jogos, interfaces visuais e projetos independentes. 
 
 ## Tecnologias e ferramentas
 
