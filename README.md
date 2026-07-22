@@ -1,4 +1,4 @@
-# Olá, eu sou Kaua Ananias
+# kaua_ananiass@root:~$
 
 Desenvolvedor focado em aplicações desktop, automação visual e interfaces interativas. 
 Trabalho criando ferramentas independentes que combinam frontend, backend local, reconhecimento de imagem e integração com o sistema operacional.
