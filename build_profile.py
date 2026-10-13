@@ -60,12 +60,16 @@ def stats():
     return data
 
 def ascii_portrait():
-    # A taller crop lets the portrait fill the left column without stretching it.
+    # Focus the full-body portrait inside the existing panel without stretching it.
     im=Image.open(ROOT/'portrait-source.jpg').convert('L')
     w,h=im.size
-    crop_width=min(w,round(h*0.77))
-    left=max(0,min(w-crop_width,int(w*0.52)-crop_width//2))
-    im=im.crop((left,0,left+crop_width,h))
+    top=round(h*0.18)
+    crop_height=h-top
+    # The character cells render at roughly 0.52 width/height, so 0.74 matches
+    # the 41x29 ASCII grid's displayed aspect ratio (rather than its pixel ratio).
+    crop_width=min(w,round(crop_height*0.74))
+    left=max(0,min(w-crop_width,round(w*0.50)-crop_width//2))
+    im=im.crop((left,top,left+crop_width,h))
     im=ImageOps.autocontrast(im,cutoff=1)
     im=ImageEnhance.Contrast(im).enhance(1.7)
     im=ImageEnhance.Sharpness(im).enhance(1.2)
