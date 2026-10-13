@@ -1,48 +1,48 @@
-# kaua_ananiass@root:~$
+<div align="center">
 
-Desenvolvedor focado em aplicações desktop, automação visual e interfaces interativas. 
-Trabalho criando ferramentas independentes que combinam frontend, backend local, reconhecimento de imagem e integração com o sistema operacional.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark_mode.svg">
+  <img src="./light_mode.svg" alt="Perfil de Kauã: arte ASCII, tecnologias e estatísticas GitHub atualizadas automaticamente" width="100%">
+</picture>
 
-## Tecnologias e ferramentas
+</div>
 
-- **Python** para automação desktop, processamento de dados, OCR e integração com bibliotecas nativas
-- **JavaScript, HTML e CSS** para construção de interfaces visuais interativas
-- **Tauri** para desenvolvimento de aplicações desktop leves e multiplataforma
-- **Rust** para ponte nativa, comandos do sistema e integração com recursos do Windows
-- **OpenCV** para reconhecimento visual e comparação de imagens
-- **OCR** para leitura e validação de textos na tela
-- **Excel / Planilhas** para automações baseadas em dados e loops
-- **Git e GitHub** para versionamento e distribuição de projetos
-- **Windows Automation** com teclado, mouse, janelas, atalhos e captura de tela
+<details>
+<summary><b>Mais sobre mim / Projetos e tecnologias</b></summary>
 
-## O que eu desenvolvo
+### Sobre mim
 
-- Aplicações desktop com interface moderna
-- Ferramentas de automação visual
-- Sistemas baseados em blocos e fluxos
-- Reconhecimento de imagem aplicado a automações
-- Execução remota de automações entre computadores
-- Integrações com planilhas e processos repetitivos
-- Projetos independentes voltados para produtividade
+Desenvolvedor focado em aplicações desktop, automação visual e interfaces interativas. Crio ferramentas independentes que combinam frontend, backend local, reconhecimento de imagem e integração com o sistema operacional.
 
-## Projeto em destaque
+### Tecnologias e ferramentas
 
-### FlowDetect
+- **Python:** automação desktop, processamento de dados, OCR e integração com bibliotecas nativas.
+- **JavaScript, HTML e CSS:** interfaces visuais interativas.
+- **Tauri:** aplicações desktop leves e multiplataforma.
+- **Rust:** comandos nativos, recursos do Windows e integração com o sistema.
+- **OpenCV e OCR:** reconhecimento visual e leitura de textos na tela.
+- **Excel / Planilhas:** automações baseadas em dados e loops.
+- **Git e GitHub:** versionamento e distribuição.
+- **Windows Automation:** teclado, mouse, janelas, atalhos e captura de tela.
 
-O **FlowDetect** é uma plataforma visual para criação e execução de automações desktop.
+### O que eu desenvolvo
 
-O projeto utiliza:
+- Aplicações desktop com interface moderna.
+- Ferramentas de automação visual e sistemas baseados em blocos e fluxos.
+- Reconhecimento de imagem aplicado à automação.
+- Execução remota de automações entre computadores.
+- Integrações com planilhas e processos repetitivos.
+- Ferramentas independentes voltadas à produtividade.
 
-- Interface em **HTML, CSS e JavaScript**
-- Aplicação desktop com **Tauri**
-- Backend de automação em **Python**
-- Integração nativa com **Rust**
-- Reconhecimento visual com **OpenCV**
-- Validação por **OCR**
-- Execução por blocos, páginas, loops e planilhas
-- Controle remoto entre **Studio** e **Agent**
+### Projeto em destaque: FlowDetect
 
-## Outros projetos
+O **FlowDetect** é uma plataforma visual de criação e execução de automações desktop. Usa **HTML/CSS/JavaScript** na interface, **Tauri** no aplicativo, **Python** no backend, **Rust** na integração nativa, **OpenCV** no reconhecimento de imagem e **OCR** na leitura de textos. Inclui blocos, páginas, loops, planilhas e controle remoto entre **Studio e Agent**.
+
+### Outros projetos e redes
 
 Também publico jogos e experimentos no itch.io como **Duka Gamedev**.
 
+- [GitHub](https://github.com/kaua-ananiass)
+- [Instagram](https://www.instagram.com/kaua_ananiass/)
+
+</details>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="735" viewBox="0 0 1260 735">
+<rect width="1260" height="735" rx="20" fill="#0d1117"/>
+<rect x="24" y="24" width="1212" height="687" rx="15" fill="#161b22" stroke="#30363d"/>
+<rect x="45" y="44" width="1170" height="645" rx="16" fill="#151b23"/>
+<style>text{font-family:Consolas,Monaco,'Liberation Mono',monospace;font-size:16px;white-space:pre}.ascii{font-size:11.2px;letter-spacing:0.4px;fill:#9dd5ff}.headline{fill:#ffffff;font-size:18px;font-weight:bold}.key{fill:#ff9736}.value{fill:#9ed2ff}.muted{fill:#7d8590}.line{fill:#8b949e}</style>
+<text class="ascii" x="58" y="74" dy="0.0">**---=+=-=+++*==------+*=%@+-+***=----++=----==+*%@.   </text>
+<text class="ascii" x="58" y="74" dy="10.6">**---=+--=+++*==------+*=%@+-+***=----++=----==+*#%*   </text>
+<text class="ascii" x="58" y="74" dy="21.2">**---++=-=+++*==------+*=%@==+***=----++=----==+*#*@-  </text>
+<text class="ascii" x="58" y="74" dy="31.8">#+---+==-=+++*=-------*++%@==+***=----++=---===+*#*%%. </text>
+<text class="ascii" x="58" y="74" dy="42.4">#+--=+===++++*=------=*++%@==+***=---=++========*#*#@+ </text>
+<text class="ascii" x="58" y="74" dy="53.0">#=--=+===+++*+==-----=*+#@@*+****=---=++=======+*#*#*%.</text>
+<text class="ascii" x="58" y="74" dy="63.6">#=--=+===+++*+==-----+#*%@@@@%***=---=++=======+*#*#+%+</text>
+<text class="ascii" x="58" y="74" dy="74.2">*=--++==++++*+=--=--*@@@@@@@@@@@#=---=++=======+*#*#+*%</text>
+<text class="ascii" x="58" y="74" dy="84.8">*=-=++==++++*+=-===*@@@@@@@@@@@@@*---=+++======+*#*#++%</text>
+<text class="ascii" x="58" y="74" dy="95.4">+===++==+++**+===+@@@@@@@@@@@@@@@#---=#%%%##%+=+*#*#++#</text>
+<text class="ascii" x="58" y="74" dy="106.0">+=-=*===+++**+===*@@@@@@@@@@@@@@@#---+#%%@@@@+++##*#++*</text>
+<text class="ascii" x="58" y="74" dy="116.6">+===*==++++**+===*@@@@@@@@@@@@@%%+---+%%%@@@@+++##*#++*</text>
+<text class="ascii" x="58" y="74" dy="127.2">+==++==+*++**+===#@@@@@@@@@@##*+*+=-=+%%%#**#+++###%*+*</text>
+<text class="ascii" x="58" y="74" dy="137.8">===++==++++**+===#@@@@@@@%#**#++%*=-=*@%%+++-+++###%***</text>
+<text class="ascii" x="58" y="74" dy="148.4">===*+=++++*#*+===*@@@@@%##%@@@%@@%++=*%**#%@@@*+###%***</text>
+<text class="ascii" x="58" y="74" dy="159.0">===*+=+*++*#*+===+@@@@@%%@@@@##%@%##+*++==+*%@#+###%***</text>
+<text class="ascii" x="58" y="74" dy="169.6">==+*+=+*++*#*+===+@%#@@%*++*+=+-#*++=#@%**#%#**####%***</text>
+<text class="ascii" x="58" y="74" dy="180.2">==+++++*++*#*+++=+**%%@@%*===*+=**+=+#%%**##++%%###%***</text>
+<text class="ascii" x="58" y="74" dy="190.8">+=*+++**+*##*++++==+**#%#%#**+#@@*==+%@@@@@@@#%@%##%**#</text>
+<text class="ascii" x="58" y="74" dy="201.4">++*+++*++*##*+++++++-+@%###*++*#@*=++#%%@@@@@@@@@##%#*#</text>
+<text class="ascii" x="58" y="74" dy="212.0">++*++**++*##*+++++++*@@@%##*#%@@@*=+****%%%@@@@@@@#@**#</text>
+<text class="ascii" x="58" y="74" dy="222.6">++*++**+**##*++++*++*@@@@@%%%#*#%+++***++++*%@@@@@%%**#</text>
+<text class="ascii" x="58" y="74" dy="233.2">+**++**+*##**+++**++*%@@@@@@@%%%*+++*#*+++***%@@%%@@**#</text>
+<text class="ascii" x="58" y="74" dy="243.8">+**+***+*##**+++**+*#%@@@@@@@@@#++++*#*+*******@@@@@**#</text>
+<text class="ascii" x="58" y="74" dy="254.4">+**+**++*##**+++****#%@@@@@@@@@#+++**#*********#%%@@**#</text>
+<text class="ascii" x="58" y="74" dy="265.0">+*****+*###*********#@@@@@@@@@@@#*==*#*********#%#@@###</text>
+<text class="ascii" x="58" y="74" dy="275.6">******+*###******#**@@@@@@@@@@@@##-.:-=++******#%%%@%##</text>
+<text class="ascii" x="58" y="74" dy="286.2">******+*###******:.-#%%@@@@@@@@%#*+:     :+*#**#%%%@@##</text>
+<text class="ascii" x="58" y="74" dy="296.8">#*******###****-     :+%@@@@@@%##*.  .      :**#%%%%%%%</text>
+<text class="ascii" x="58" y="74" dy="307.4">#******####**-         .-+*%%####:    ...    =*##%%%@@@</text>
+<text class="ascii" x="58" y="74" dy="318.0">#******####*:             .-+*##*       . ..:.=#%@%@@@@</text>
+<text class="ascii" x="58" y="74" dy="328.6">#******###*-                 :=+-   .    .=+==-*#%%@@@@</text>
+<text class="ascii" x="58" y="74" dy="339.2">**##***###=                    .    .:. .:=+++++#%@@@@@</text>
+<text class="ascii" x="58" y="74" dy="349.8">####**####-  .          .      .    .-=:.=+******@@@@@@</text>
+<text class="ascii" x="58" y="74" dy="360.4">####**#%%*:  :          .     .:    .:-:.=*###***@@@@@@</text>
+<text class="ascii" x="58" y="74" dy="371.0">####**#%%+. ...          .......  . ... .=#####*#@@@@@@</text>
+<text class="ascii" x="58" y="74" dy="381.6">####*##%%=. .:: .        ::...:  .:  .  .=#####*%@@@@@@</text>
+<text class="ascii" x="58" y="74" dy="392.2">###**##%#-.  .= ...       :...-  .---=##=+#####%%%@@@@@</text>
+<text class="ascii" x="58" y="74" dy="402.8">###*##%%#:..  =..:-.  .:  -=-==..:-=*@@@#+##%%%@%@@@@*@</text>
+<text class="ascii" x="58" y="74" dy="413.4">######%%*::.  --.:+++-.:. :*##-::--:#@@@*:*%%%@@@@@@+*@</text>
+<text class="ascii" x="58" y="74" dy="424.0">######%%=..:  .=::%@@+.:- .-**=----.+@@@-.*%%%@@@@@%:%@</text>
+<text class="ascii" x="58" y="74" dy="434.6">#####%%%-..:.  =:.*@@#::-::=**=+--:..+#+ :*##%%@@@@--@@</text>
+<text class="ascii" x="58" y="74" dy="445.2">#####%%#:......-:.+@@@=:-=...-:-::...    :*##%@@@@=.+@@</text>
+<text class="ascii" x="58" y="74" dy="455.8">%####%%+:..::..:-.=@@*:::=:  .::::...   .-*#%@@@@+..#@@</text>
+<text class="ascii" x="58" y="74" dy="466.4">%###%%%=:.::::.:-.:+*=:::-+.  .::::..   .=*@@@@@+..:%@@</text>
+<text class="ascii" x="58" y="74" dy="477.0">%##%%%#-:::---::-.:=+=::::==. ...:...   :*@@@@@+::.-@@@</text>
+<text class="ascii" x="58" y="74" dy="487.6">%#%%%%+-:-=+++++=::==--::::+-.. .....  :%@@@@@+:...+@@%</text>
+<text class="ascii" x="58" y="74" dy="498.2">%%%%%%-:.:--=+**+::=+=-:::.=+.       .+@@@@@@=.....#@@*</text>
+<text class="ascii" x="58" y="74" dy="508.8">%%%%%#+-.    .-=*:.-+=-:-:..+=.    .+@@@@@@%-.....:%@@=</text>
+<text class="ascii" x="58" y="74" dy="519.4">%%%%%%%#*=-=+++#%-.:=+---:..:**- .+%@@@@@@*:......-@@%:</text>
+<text class="ascii" x="58" y="74" dy="530.0">%%%%@%@@@@@@@@@@@*-:=+=--:.   =**@@@@@@@%=........+@@#:</text>
+<text class="ascii" x="58" y="74" dy="540.6">#%%%%@@@@@@@@%##@%+:-*=--   :+#@@@@@@@@+:.........#@@+:</text>
+<text class="ascii" x="58" y="74" dy="551.2">#**+#%@@@@@@@%###%#=-++::=*%@@@@@@@@@*:..........:@@@-:</text>
+<text class="ascii" x="58" y="74" dy="561.8">@@@%#***##%@%##**##++*#%@@@@@@@@@@%*-........... =@@%::</text>
+<text class="ascii" x="58" y="74" dy="572.4">@@@@@@@@%%######%%%@@@@@@@@@@@@@#+:..............#@@*::</text>
+<text class="ascii" x="58" y="74" dy="583.0">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#+-:...............:%@@-::</text>
+<text class="ascii" x="58" y="74" dy="593.6">=*%@@@@@@@@@@@@@@@@@@@@@@%#+-:................. =@@%:::</text>
+<path d="M660 112 H1180" stroke="#303b47" stroke-dasharray="4 6"/>
+<path d="M660 277 H1180" stroke="#303b47" stroke-dasharray="4 6"/>
+<path d="M660 438 H1180" stroke="#303b47" stroke-dasharray="4 6"/>
+<path d="M660 571 H1180" stroke="#303b47" stroke-dasharray="4 6"/>
+<text class="headline" x="660" y="76">kaua-ananiass ~</text>
+<text class="value" x="660" y="98">Desenvolvedor | Desktop &amp; Automação</text>
+<text class="line" x="660" y="142">- Perfil</text>
+<text class="key" x="660" y="171">· Foco</text>
+<text class="value" x="920" y="171">Automação visual</text>
+<text class="key" x="660" y="196">· Atuação</text>
+<text class="value" x="920" y="196">Aplicações desktop</text>
+<text class="key" x="660" y="221">· Interfaces</text>
+<text class="value" x="920" y="221">Interativas</text>
+<text class="key" x="660" y="246">· Ambiente</text>
+<text class="value" x="920" y="246">Windows / Multiplataforma</text>
+<text class="line" x="660" y="305">- Tecnologias &amp; Ferramentas</text>
+<text class="key" x="660" y="334">· Linguagens</text>
+<text class="value" x="920" y="334">Python, JS, Rust</text>
+<text class="key" x="660" y="359">· Frontend</text>
+<text class="value" x="920" y="359">HTML, CSS</text>
+<text class="key" x="660" y="384">· Desktop</text>
+<text class="value" x="920" y="384">Tauri</text>
+<text class="key" x="660" y="409">· Visão</text>
+<text class="value" x="920" y="409">OpenCV, OCR</text>
+<text class="line" x="660" y="466">- Desenvolvimento</text>
+<text class="key" x="660" y="495">· Automação</text>
+<text class="value" x="920" y="495">Teclado, mouse, janelas</text>
+<text class="key" x="660" y="520">· Workflows</text>
+<text class="value" x="920" y="520">Blocos, loops, planilhas</text>
+<text class="key" x="660" y="545">· Integração</text>
+<text class="value" x="920" y="545">Git, GitHub, Excel</text>
+<text class="line" x="660" y="599">- Projetos &amp; Contato</text>
+<text class="key" x="660" y="624">· Destaque</text>
+<text class="value" x="920" y="624">FlowDetect</text>
+<text class="key" x="660" y="649">· Outros</text>
+<text class="value" x="920" y="649">Duka Gamedev / itch.io</text>
+<text class="key" x="660" y="674">· GitHub</text>
+<text class="value" x="920" y="674">github.com/kaua-ananiass</text>
+</svg>
