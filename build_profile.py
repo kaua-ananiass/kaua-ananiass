@@ -62,15 +62,19 @@ def stats():
 def ascii_portrait():
     path=ROOT/'portrait-source.jpg'
     im=Image.open(path).convert('L')
-    # Close portrait crop, avoiding the largely empty mirror and wall.
-    # The source is already a close-up portrait; keep the face and upper body.
+    # Square source crop and terminal-cell aspect correction: 36 x 19 cells.
+    # A glyph occupies ~9 x 17 px, giving a genuinely square 324 x 323 px image.
     w,h=im.size
-    im=im.crop((int(w*0.08), int(h*0.015), int(w*0.92), int(h*0.99)))
-    im=ImageOps.autocontrast(im,cutoff=3)
-    im=ImageEnhance.Contrast(im).enhance(1.65)
-    im=im.resize((39,26),Image.Resampling.LANCZOS)
+    side=min(w,h)
+    cx=int(w*0.51); cy=int(h*0.48)
+    left=max(0,min(w-side,cx-side//2))
+    top=max(0,min(h-side,cy-side//2))
+    im=im.crop((left,top,left+side,top+side))
+    im=ImageOps.autocontrast(im,cutoff=2)
+    im=ImageEnhance.Contrast(im).enhance(1.55)
+    im=im.resize((36,19),Image.Resampling.LANCZOS)
     ramp='@%#*+=-:.  '
-    return [''.join(ramp[min(len(ramp)-1,int(p)*len(ramp)//256)] for p in list(im.crop((0,y,39,y+1)).getdata())) for y in range(26)]
+    return [''.join(ramp[min(len(ramp)-1,int(p)*len(ramp)//256)] for p in list(im.crop((0,y,36,y+1)).getdata())) for y in range(19)]
 
 def render(data,light=False):
     dark=not light
@@ -83,8 +87,12 @@ def render(data,light=False):
     text {{font-family:Consolas, 'Liberation Mono',monospace;font-size:15px;white-space:pre;}}
     .fg {{fill:{fg}}}.key {{fill:{key}}}.value {{fill:{val}}}.cc {{fill:{cc}}}.green {{fill:#3fb950}}.red {{fill:#f85149}}
     </style><rect width="985" height="530" rx="15" fill="{bg}"/>''']
+    # Square portrait panel: 350 x 350, centered in the left column.
+    frame='#30363d' if dark else '#d0d7de'
+    shade='#0d1117' if dark else '#ffffff'
+    parts.append(f'<rect x="18" y="89" width="350" height="350" rx="9" fill="{shade}" stroke="{frame}" stroke-width="1.3"/>')
     for i,line in enumerate(ascii_portrait()):
-        parts.append(f'<text x="15" y="{30+i*19}" class="fg">{escape(line)}</text>')
+        parts.append(f'<text x="30" y="{113+i*17}" class="fg">{escape(line)}</text>')
     def t(x,y,s,c='fg',id=None):
         att=f' id="{id}"' if id else ''
         parts.append(f'<text x="{x}" y="{y}" class="{c}"{att}>{escape(str(s))}</text>')
