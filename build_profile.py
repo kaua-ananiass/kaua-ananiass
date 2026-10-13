@@ -3,7 +3,7 @@
 import json, os, urllib.request
 from pathlib import Path
 from xml.sax.saxutils import escape
-from PIL import Image,ImageOps,ImageEnhance,ImageFilter
+from PIL import Image,ImageOps
 ROOT=Path(__file__).resolve().parent
 USER='kaua-ananiass'
 TOKEN=os.getenv('GH_TOKEN') or os.getenv('GITHUB_TOKEN','')
@@ -60,24 +60,60 @@ def stats():
     return data
 
 def ascii_portrait():
-    # Focus the full-body portrait inside the existing panel without stretching it.
-    im=Image.open(ROOT/'portrait-source.jpg').convert('L')
-    w,h=im.size
+    # Frame the head, torso and bag like a portrait; never stretch the source.
+    source=Image.open(ROOT/'portrait-source.jpg').convert('RGB')
+    w,h=source.size
     top=round(h*0.18)
-    crop_height=h-top
-    # The character cells render at roughly 0.52 width/height, so 0.74 matches
-    # the 41x29 ASCII grid's displayed aspect ratio (rather than its pixel ratio).
+    bottom=round(h*0.70)
+    crop_height=bottom-top
+    # Consolas cells are narrower than their 12px line spacing. This source
+    # ratio matches the displayed 51x39 grid, so the person is not stretched.
     crop_width=min(w,round(crop_height*0.74))
-    left=max(0,min(w-crop_width,round(w*0.50)-crop_width//2))
-    im=im.crop((left,top,left+crop_width,h))
-    im=ImageOps.autocontrast(im,cutoff=1)
-    im=ImageEnhance.Contrast(im).enhance(1.7)
-    im=ImageEnhance.Sharpness(im).enhance(1.2)
-    # Consolas at 14px and 16px row spacing fills a 360x494px portrait panel.
-    cols,rows=41,29
-    im=im.resize((cols,rows),Image.Resampling.LANCZOS)
-    ramp='@%#*+=-:.  '
-    return [''.join(ramp[min(len(ramp)-1,int(px)*len(ramp)//256)] for px in list(im.crop((0,y,cols,y+1)).getdata())) for y in range(rows)]
+    left=max(0,min(w-crop_width,round(w*0.52)-crop_width//2))
+    scene=source.crop((left,top,left+crop_width,bottom))
+    cols,rows=51,39
+    color=scene.resize((cols,rows),Image.Resampling.LANCZOS)
+    # Equalization preserves shading in the dark jacket that global contrast
+    # previously flattened into one solid block of @ characters.
+    tone=ImageOps.equalize(scene.convert('L'))
+    tone=tone.resize((cols,rows),Image.Resampling.LANCZOS)
+    cells=[]
+    for y in range(rows):
+        line=[]
+        for x in range(cols):
+            r,g,b=color.getpixel((x,y))
+            gray=tone.getpixel((x,y))
+            nx,ny=(x+0.5)/cols,(y+0.5)/rows
+            # The bag is the only colored area. Its red, yellow, blue and green
+            # stripes come from the photograph rather than a decorative gradient.
+            bag=0.43<=nx<=0.72 and 0.57<=ny<=0.80
+            vivid=max(r,g,b)-min(r,g,b)>24 and max(r,g,b)>65
+            if bag and vivid:
+                if r>105 and g>75 and b<min(r,g)*0.82: kind='bag-yellow'
+                elif r>g*1.2 and r>b*1.2: kind='bag-red'
+                elif b>r*1.22 and b>g*1.08: kind='bag-blue'
+                elif g>r*1.16 and g>b*1.05: kind='bag-green'
+                else: kind='person'
+                char='@' if gray<100 else '#'
+            else:
+                green_ground=ny>0.76 and g>r*1.12 and g>b*1.10
+                blue_sky=b>90 and b>g*1.2 and b>r*1.5
+                dark_figure=0.12<nx<0.83 and gray<145 and not green_ground and not blue_sky
+                if dark_figure:
+                    kind='person'
+                    char='@' if gray<55 else '%' if gray<75 else '#' if gray<95 else '*' if gray<115 else '+' if gray<130 else '='
+                else:
+                    kind='scene'
+                    if ny<0.76:
+                        # Show only faint cloud edges, not broad bands of sky.
+                        edge=max(abs(gray-tone.getpixel((max(0,x-1),y))),
+                                 abs(gray-tone.getpixel((x,max(0,y-1)))))
+                        char='.' if gray>130 and edge>30 else ' '
+                    else:
+                        char='.' if (x+y)%5==0 else ' '
+            line.append((char,kind))
+        cells.append(line)
+    return cells
 
 def render(data,light=False):
     dark=not light
@@ -89,15 +125,21 @@ def render(data,light=False):
     parts=[f'''<svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530"><style>
     text {{font-family:Consolas, 'Liberation Mono',monospace;font-size:15px;white-space:pre;}}
     .fg {{fill:{fg}}}.key {{fill:{key}}}.value {{fill:{val}}}.cc {{fill:{cc}}}.green {{fill:#3fb950}}.red {{fill:#f85149}}
+    .portrait-row {{font-size:11px;letter-spacing:0}}
+    .scene {{fill:{'#596777' if dark else '#a8b0b9'}}}.person {{fill:{fg}}}
+    .bag-red {{fill:#e24250}}.bag-yellow {{fill:#e8c64a}}.bag-blue {{fill:#448ee0}}.bag-green {{fill:#36ad69}}
     </style><rect width="985" height="530" rx="15" fill="{bg}"/>''']
     # Large portrait frame, close to the height of the reference profile.
     frame='#30363d' if dark else '#d0d7de'
     shade='#0d1117' if dark else '#ffffff'
     parts.append(f'<rect x="14" y="18" width="360" height="494" rx="9" fill="{shade}" stroke="{frame}" stroke-width="1.3"/>')
-    parts.append('<g style="font-size:14px;letter-spacing:0px">')
     for i,line in enumerate(ascii_portrait()):
-        parts.append(f'<text x="25" y="48" dy="{i*16}" class="fg">{escape(line)}</text>')
-    parts.append('</g>')
+        runs=[]
+        for char,kind in line:
+            if runs and runs[-1][0]==kind:runs[-1]=(kind,runs[-1][1]+char)
+            else:runs.append((kind,char))
+        spans=''.join(f'<tspan class="{kind}">{escape(chars)}</tspan>' for kind,chars in runs)
+        parts.append(f'<text x="25" y="40" dy="{i*12.1:.1f}" class="portrait-row">{spans}</text>')
     def t(x,y,s,c='fg',id=None):
         att=f' id="{id}"' if id else ''
         parts.append(f'<text x="{x}" y="{y}" class="{c}"{att}>{escape(str(s))}</text>')
