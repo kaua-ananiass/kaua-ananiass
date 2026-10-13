@@ -7,7 +7,7 @@ on:
     branches: [main]
     paths:
       - 'build_profile.py'
-      - 'perfil-terminal.svg'
+      - 'portrait-source.jpg'
       - '.github/workflows/update-profile.yml'
 permissions:
   contents: write
@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Instalar dependencias
+        run: python -m pip install Pillow
       - name: Gerar SVGs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
