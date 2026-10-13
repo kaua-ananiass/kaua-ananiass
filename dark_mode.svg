@@ -2,32 +2,26 @@
     text {font-family:Consolas, 'Liberation Mono',monospace;font-size:15px;white-space:pre;}
     .fg {fill:#c9d1d9}.key {fill:#ffa657}.value {fill:#a5d6ff}.cc {fill:#616e7f}.green {fill:#3fb950}.red {fill:#f85149}
     </style><rect width="985" height="530" rx="15" fill="#161b22"/>
-<text x="15" y="30" class="fg">=--=++*+-:::::-*=#@+-++*+-:.:+=------=*</text>
-<text x="15" y="49" class="fg">---+++*+-::::-+#*@@@%%*#+-:::+=------=*</text>
-<text x="15" y="68" class="fg">--=+++*+-:--=%@@@@@@@@@@%-::-++=--==-=*</text>
-<text x="15" y="87" class="fg">--++=**=--=@@@@@@@@@@@@@@=::-#%@@%@#=+*</text>
-<text x="15" y="106" class="fg">-=+++**=--+@@@@@@@@@@%%##-::=%@@%%@+=+#</text>
-<text x="15" y="125" class="fg">==+++#*=--+@@@@@@@%%#%**%=--+@%%+*++++#</text>
-<text x="15" y="144" class="fg">=+++*#*=--=@@@@@%#%@@%#%@**=+#+++#%@#+#</text>
-<text x="15" y="163" class="fg">++++*#+====##%@@%#===+==#+==#@%**##=*%#</text>
-<text x="15" y="182" class="fg">++++##+=======*@%%#*++#@@=-=#%@@@@@%@@@</text>
-<text x="15" y="201" class="fg">*++*##+=+++++*@@@%%##%#@%==+***###@@@@@</text>
-<text x="15" y="220" class="fg">*++##*++++*++#@@@@@@@%%%+=++#*+++++#%@@</text>
-<text x="15" y="239" class="fg">*+*##*+++**+*#@@@@@@@@@#+++*#*******+#@</text>
-<text x="15" y="258" class="fg">++###*++*##**@@@@@@@@@@@#*.:-==+*##**#%</text>
-<text x="15" y="277" class="fg">+*#%#***+=.  -+%@@@@@@@%#=       :-+##%</text>
-<text x="15" y="296" class="fg">+*%##*=.        .:-+#%#%+          .=#%</text>
-<text x="15" y="315" class="fg">*#%%*.               .-=        .==-:+%</text>
-<text x="15" y="334" class="fg">*#%%:                       .:  =+*****</text>
-<text x="15" y="353" class="fg">#%@+                            =####*#</text>
-<text x="15" y="372" class="fg">#%@-   :          .   .   . .--.+%####@</text>
-<text x="15" y="391" class="fg">%@#.    -  -..     ==+:  ::=@@@*-%%@%@@</text>
-<text x="15" y="410" class="fg">%@+     :. *@@- .  :*#-::: .#@%  %%%@@@</text>
-<text x="15" y="429" class="fg">@%:     .: -@@%  :. .:::.    .  :##%@@@</text>
-<text x="15" y="448" class="fg">@+       :  +#-  .=     .       =#@@@@*</text>
-<text x="15" y="467" class="fg">%: .--==--. -=:.. .+.          +@@@@%- </text>
-<text x="15" y="486" class="fg">+.    .-=*. :=-...  +:      -#@@@@#-   </text>
-<text x="15" y="505" class="fg">@%*+-=+++%=  ==:..   ++:.-*@@@@@#-     </text>
+<rect x="18" y="89" width="350" height="350" rx="9" fill="#0d1117" stroke="#30363d" stroke-width="1.3"/>
+<text x="30" y="113" class="fg">+==::--=+.:::==:..:=%=-+: :-.::+*   </text>
+<text x="30" y="130" class="fg">==-::--+=.-:-==:..:=%--+:.--:::=#+  </text>
+<text x="30" y="147" class="fg">-=-::--+-:-:===:.:*#@%#*:.--::-+**- </text>
+<text x="30" y="164" class="fg">-+-:---*::--=+=:=%@@@@@@-.+#**-+*=*.</text>
+<text x="30" y="181" class="fg">-=---=+*:--==+=:#@@@@%#*=:*%#*=+*+++</text>
+<text x="30" y="198" class="fg">:=--==++:=-==+=:+%@#**+**=#++**+**+%</text>
+<text x="30" y="215" class="fg">-==-==*+-===+*=--=#%*=+%=-#%@%%%#*+%</text>
+<text x="30" y="232" class="fg">-===+=*===+=*+====%@%%%#=++=+*%@@*+%</text>
+<text x="30" y="249" class="fg">====++#+++++*++++*@@@@@#=-==+++#%#*@</text>
+<text x="30" y="266" class="fg">=+=++**+++++*+-.  :+*%%#.    .+#%%%@</text>
+<text x="30" y="283" class="fg">@@@%#**+**+**.        ..    .--*%@@@</text>
+<text x="30" y="300" class="fg">@@@@%#****+#=               =*+*@@@@</text>
+<text x="30" y="317" class="fg">@%@@@#*****#.    .   ::  :#+=##%@%@%</text>
+<text x="30" y="334" class="fg">@@@@@###**#*    .@=  :=.  +::#%@#:@-</text>
+<text x="30" y="351" class="fg">@%@@@#####%: .   +- :       +@@+ *@ </text>
+<text x="30" y="368" class="fg">%@@@%####%#. .:= ::  .   .+@@*.  @+ </text>
+<text x="30" y="385" class="fg"> -#@@@%####%#%##= -. .+#%@@+.   =@. </text>
+<text x="30" y="402" class="fg">    -*%@@%@@%@%#%#%%@@@#+:      @*  </text>
+<text x="30" y="419" class="fg">        :=+*#%@@@#*+-.         -@:  </text>
 <text x="390" y="30" class="fg">kaua@ananiass ----------------------------------------------</text>
 <text x="390" y="50" class="cc">. </text>
 <text x="409" y="50"><tspan class="key">OS</tspan><tspan class="fg">:</tspan><tspan class="cc"> ............................................... </tspan><tspan class="value">Windows</tspan></text>
@@ -61,5 +55,5 @@
 <text x="390" y="450" class="fg">- GitHub Stats ------------------------------------------------</text>
 <text x="390" y="470"><tspan class="cc">. </tspan><tspan class="key">Repos</tspan><tspan class="fg">: </tspan><tspan class="cc">.... </tspan><tspan class="value">3</tspan><tspan class="fg"> {</tspan><tspan class="key">Contributed</tspan><tspan class="fg">: </tspan><tspan class="value">340</tspan><tspan class="fg">} | </tspan><tspan class="key">Stars</tspan><tspan class="fg">: </tspan><tspan class="cc">........ </tspan><tspan class="value">2</tspan></text>
 <text x="390" y="490"><tspan class="cc">. </tspan><tspan class="key">Commits</tspan><tspan class="fg">: </tspan><tspan class="cc">.............. </tspan><tspan class="value">33</tspan><tspan class="fg"> | </tspan><tspan class="key">Followers</tspan><tspan class="fg">: </tspan><tspan class="cc">....... </tspan><tspan class="value">1</tspan></text>
-<text x="390" y="510"><tspan class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan><tspan class="fg">: </tspan><tspan class="value">5,570</tspan><tspan class="fg"> ( </tspan><tspan class="green">6,762++</tspan><tspan class="fg">,  </tspan><tspan class="red">1,192--</tspan><tspan class="fg"> )</tspan></text>
+<text x="390" y="510"><tspan class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan><tspan class="fg">: </tspan><tspan class="value">5,578</tspan><tspan class="fg"> ( </tspan><tspan class="green">6,778++</tspan><tspan class="fg">,  </tspan><tspan class="red">1,200--</tspan><tspan class="fg"> )</tspan></text>
 </svg>
