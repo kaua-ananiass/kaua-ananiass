@@ -60,19 +60,17 @@ def stats():
     return data
 
 def ascii_portrait():
-    # Uses the current source photo, preserving a true square crop.
+    # A taller crop lets the portrait fill the left column without stretching it.
     im=Image.open(ROOT/'portrait-source.jpg').convert('L')
     w,h=im.size
-    side=min(w,h)
-    # Full width of the new selfie, without reintroducing an old mirror outline.
-    left=(w-side)//2
-    top=max(0, min(h-side, int((h-side)*0.15)))
-    im=im.crop((left,top,left+side,top+side))
+    crop_width=min(w,round(h*0.77))
+    left=max(0,min(w-crop_width,int(w*0.52)-crop_width//2))
+    im=im.crop((left,0,left+crop_width,h))
     im=ImageOps.autocontrast(im,cutoff=1)
     im=ImageEnhance.Contrast(im).enhance(1.7)
     im=ImageEnhance.Sharpness(im).enhance(1.2)
-    # 42x23 characters, rendered at 7.6x14.1px per cell = nearly square.
-    cols,rows=42,23
+    # Consolas at 14px and 16px row spacing fills a 360x494px portrait panel.
+    cols,rows=41,29
     im=im.resize((cols,rows),Image.Resampling.LANCZOS)
     ramp='@%#*+=-:.  '
     return [''.join(ramp[min(len(ramp)-1,int(px)*len(ramp)//256)] for px in list(im.crop((0,y,cols,y+1)).getdata())) for y in range(rows)]
@@ -88,13 +86,13 @@ def render(data,light=False):
     text {{font-family:Consolas, 'Liberation Mono',monospace;font-size:15px;white-space:pre;}}
     .fg {{fill:{fg}}}.key {{fill:{key}}}.value {{fill:{val}}}.cc {{fill:{cc}}}.green {{fill:#3fb950}}.red {{fill:#f85149}}
     </style><rect width="985" height="530" rx="15" fill="{bg}"/>''']
-    # Square 350x350 visual frame; character grid is proportional rather than stretched.
+    # Large portrait frame, close to the height of the reference profile.
     frame='#30363d' if dark else '#d0d7de'
     shade='#0d1117' if dark else '#ffffff'
-    parts.append(f'<rect x="18" y="89" width="350" height="350" rx="9" fill="{shade}" stroke="{frame}" stroke-width="1.3"/>')
-    parts.append('<g style="font-size:11px;letter-spacing:0px">')
+    parts.append(f'<rect x="14" y="18" width="360" height="494" rx="9" fill="{shade}" stroke="{frame}" stroke-width="1.3"/>')
+    parts.append('<g style="font-size:14px;letter-spacing:0px">')
     for i,line in enumerate(ascii_portrait()):
-        parts.append(f'<text x="32" y="110" dy="{i*14}" class="fg" style="font-size:11px">{escape(line)}</text>')
+        parts.append(f'<text x="25" y="48" dy="{i*16}" class="fg">{escape(line)}</text>')
     parts.append('</g>')
     def t(x,y,s,c='fg',id=None):
         att=f' id="{id}"' if id else ''
