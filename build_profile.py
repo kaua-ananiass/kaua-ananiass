@@ -5,7 +5,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 from PIL import Image,ImageOps,ImageEnhance,ImageFilter
 ROOT=Path(__file__).resolve().parent
-USER=os.getenv('GITHUB_USERNAME','kaua-ananiass')
+USER='kaua-ananiass'
 TOKEN=os.getenv('GH_TOKEN') or os.getenv('GITHUB_TOKEN','')
 
 def api(url,payload=None):
@@ -63,7 +63,9 @@ def ascii_portrait():
     path=ROOT/'portrait-source.jpg'
     im=Image.open(path).convert('L')
     # Close portrait crop, avoiding the largely empty mirror and wall.
-    im=im.crop((275,405,858,1145))
+    # The source is already a close-up portrait; keep the face and upper body.
+    w,h=im.size
+    im=im.crop((int(w*0.08), int(h*0.015), int(w*0.92), int(h*0.99)))
     im=ImageOps.autocontrast(im,cutoff=3)
     im=ImageEnhance.Contrast(im).enhance(1.65)
     im=im.resize((39,26),Image.Resampling.LANCZOS)
