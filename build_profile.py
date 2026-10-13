@@ -60,21 +60,22 @@ def stats():
     return data
 
 def ascii_portrait():
-    path=ROOT/'portrait-source.jpg'
-    im=Image.open(path).convert('L')
-    # Square source crop and terminal-cell aspect correction: 36 x 19 cells.
-    # A glyph occupies ~9 x 17 px, giving a genuinely square 324 x 323 px image.
+    # Uses the current source photo, preserving a true square crop.
+    im=Image.open(ROOT/'portrait-source.jpg').convert('L')
     w,h=im.size
     side=min(w,h)
-    cx=int(w*0.51); cy=int(h*0.48)
-    left=max(0,min(w-side,cx-side//2))
-    top=max(0,min(h-side,cy-side//2))
+    # Full width of the new selfie, without reintroducing an old mirror outline.
+    left=(w-side)//2
+    top=max(0, min(h-side, int((h-side)*0.15)))
     im=im.crop((left,top,left+side,top+side))
-    im=ImageOps.autocontrast(im,cutoff=2)
-    im=ImageEnhance.Contrast(im).enhance(1.55)
-    im=im.resize((36,19),Image.Resampling.LANCZOS)
+    im=ImageOps.autocontrast(im,cutoff=1)
+    im=ImageEnhance.Contrast(im).enhance(1.7)
+    im=ImageEnhance.Sharpness(im).enhance(1.2)
+    # 42x23 characters, rendered at 7.6x14.1px per cell = nearly square.
+    cols,rows=42,23
+    im=im.resize((cols,rows),Image.Resampling.LANCZOS)
     ramp='@%#*+=-:.  '
-    return [''.join(ramp[min(len(ramp)-1,int(p)*len(ramp)//256)] for p in list(im.crop((0,y,36,y+1)).getdata())) for y in range(19)]
+    return [''.join(ramp[min(len(ramp)-1,int(px)*len(ramp)//256)] for px in list(im.crop((0,y,cols,y+1)).getdata())) for y in range(rows)]
 
 def render(data,light=False):
     dark=not light
@@ -87,12 +88,14 @@ def render(data,light=False):
     text {{font-family:Consolas, 'Liberation Mono',monospace;font-size:15px;white-space:pre;}}
     .fg {{fill:{fg}}}.key {{fill:{key}}}.value {{fill:{val}}}.cc {{fill:{cc}}}.green {{fill:#3fb950}}.red {{fill:#f85149}}
     </style><rect width="985" height="530" rx="15" fill="{bg}"/>''']
-    # Square portrait panel: 350 x 350, centered in the left column.
+    # Square 350x350 visual frame; character grid is proportional rather than stretched.
     frame='#30363d' if dark else '#d0d7de'
     shade='#0d1117' if dark else '#ffffff'
     parts.append(f'<rect x="18" y="89" width="350" height="350" rx="9" fill="{shade}" stroke="{frame}" stroke-width="1.3"/>')
+    parts.append('<g style="font-size:11px;letter-spacing:0px">')
     for i,line in enumerate(ascii_portrait()):
-        parts.append(f'<text x="30" y="{113+i*17}" class="fg">{escape(line)}</text>')
+        parts.append(f'<text x="32" y="110" dy="{i*14}" class="fg" style="font-size:11px">{escape(line)}</text>')
+    parts.append('</g>')
     def t(x,y,s,c='fg',id=None):
         att=f' id="{id}"' if id else ''
         parts.append(f'<text x="{x}" y="{y}" class="{c}"{att}>{escape(str(s))}</text>')
