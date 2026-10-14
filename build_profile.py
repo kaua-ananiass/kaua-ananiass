@@ -84,35 +84,43 @@ def ascii_portrait():
             r,g,b=color.getpixel((x,y))
             gray=tone.getpixel((x,y))
             nx,ny=(x+0.5)/cols,(y+0.5)/rows
-            # The bag is the only colored area. Its red, yellow, blue and green
-            # stripes come from the photograph rather than a decorative gradient.
-            bag=0.43<=nx<=0.72 and 0.57<=ny<=0.80
-            vivid=max(r,g,b)-min(r,g,b)>24 and max(r,g,b)>65
-            if bag and vivid:
-                if r>105 and g>75 and b<min(r,g)*0.82: kind='bag-yellow'
-                elif r>g*1.2 and r>b*1.2: kind='bag-red'
-                elif b>r*1.22 and b>g*1.08: kind='bag-blue'
-                elif g>r*1.16 and g>b*1.05: kind='bag-green'
-                else: kind='person'
-                char='@' if gray<100 else '#'
+            green_ground=ny>0.76 and g>r*1.12 and g>b*1.10
+            blue_sky=b>90 and b>g*1.2 and b>r*1.5
+            dark_figure=0.12<nx<0.83 and gray<145 and not green_ground and not blue_sky
+            if dark_figure:
+                kind='person'
+                char='@' if gray<55 else '%' if gray<75 else '#' if gray<95 else '*' if gray<115 else '+' if gray<130 else '='
             else:
-                green_ground=ny>0.76 and g>r*1.12 and g>b*1.10
-                blue_sky=b>90 and b>g*1.2 and b>r*1.5
-                dark_figure=0.12<nx<0.83 and gray<145 and not green_ground and not blue_sky
-                if dark_figure:
-                    kind='person'
-                    char='@' if gray<55 else '%' if gray<75 else '#' if gray<95 else '*' if gray<115 else '+' if gray<130 else '='
+                kind='scene'
+                if ny<0.76:
+                    # Show only faint cloud edges, not broad bands of sky.
+                    edge=max(abs(gray-tone.getpixel((max(0,x-1),y))),
+                             abs(gray-tone.getpixel((x,max(0,y-1)))))
+                    char='.' if gray>130 and edge>30 else ' '
                 else:
-                    kind='scene'
-                    if ny<0.76:
-                        # Show only faint cloud edges, not broad bands of sky.
-                        edge=max(abs(gray-tone.getpixel((max(0,x-1),y))),
-                                 abs(gray-tone.getpixel((x,max(0,y-1)))))
-                        char='.' if gray>130 and edge>30 else ' '
-                    else:
-                        char='.' if (x+y)%5==0 else ' '
+                    char='.' if (x+y)%5==0 else ' '
             line.append((char,kind))
         cells.append(line)
+    # At this grid size, color sampling breaks the satchel into random dots.
+    # Draw its trapezoid, central dark clasp and four original colors as
+    # small ASCII pixel art while leaving the surrounding photo untouched.
+    satchel=[
+        '    ______     ',
+        '  /RRRRSSRRR\\  ',
+        ' /YRRRRSSRRRR\\ ',
+        ' |YBBBBSSBBBB| ',
+        ' |YBBBBSSBBBB| ',
+        ' \\YGGGGSSGGGG/ ',
+        '  \\GGGGGGGGG/  ',
+        "   '-------'   ",
+    ]
+    bag_colors={'R':'bag-red','Y':'bag-yellow','B':'bag-blue','G':'bag-green'}
+    for row,pattern in enumerate(satchel,start=22):
+        for offset,token in enumerate(pattern):
+            x=22+offset
+            if token in bag_colors:cells[row][x]=('#',bag_colors[token])
+            elif token=='S':cells[row][x]=('|','bag-strap')
+            elif token!=' ':cells[row][x]=(token,'bag-outline')
     return cells
 
 def render(data,light=False):
@@ -128,6 +136,7 @@ def render(data,light=False):
     .portrait-row {{font-size:11px;letter-spacing:0}}
     .scene {{fill:{'#596777' if dark else '#a8b0b9'}}}.person {{fill:{fg}}}
     .bag-red {{fill:#e24250}}.bag-yellow {{fill:#e8c64a}}.bag-blue {{fill:#448ee0}}.bag-green {{fill:#36ad69}}
+    .bag-outline {{fill:{'#9aa8b5' if dark else '#536171'}}}.bag-strap {{fill:{'#778391' if dark else '#46515d'}}}
     </style><rect width="985" height="530" rx="15" fill="{bg}"/>''']
     # Large portrait frame, close to the height of the reference profile.
     frame='#30363d' if dark else '#d0d7de'
