@@ -101,26 +101,41 @@ def ascii_portrait():
                     char='.' if (x+y)%5==0 else ' '
             line.append((char,kind))
         cells.append(line)
-    # At this grid size, color sampling breaks the satchel into random dots.
-    # Draw its trapezoid, central dark clasp and four original colors as
-    # small ASCII pixel art while leaving the surrounding photo untouched.
-    satchel=[
-        '    ______     ',
-        '  /RRRRSSRRR\\  ',
-        ' /YRRRRSSRRRR\\ ',
-        ' |YBBBBSSBBBB| ',
-        ' |YBBBBSSBBBB| ',
-        ' \\YGGGGSSGGGG/ ',
-        '  \\GGGGGGGGG/  ',
-        "   '-------'   ",
-    ]
+    # Classify the original pixels within the bag, rather than averaging away
+    # its narrow WinRAR-like stripes in the much smaller ASCII grid.
+    bag_left,bag_right=round(w*0.490),round(w*0.598)
+    bag_top,bag_bottom=round(h*0.480),round(h*0.556)
     bag_colors={'R':'bag-red','Y':'bag-yellow','B':'bag-blue','G':'bag-green'}
-    for row,pattern in enumerate(satchel,start=22):
-        for offset,token in enumerate(pattern):
-            x=22+offset
-            if token in bag_colors:cells[row][x]=('#',bag_colors[token])
-            elif token=='S':cells[row][x]=('|','bag-strap')
-            elif token!=' ':cells[row][x]=(token,'bag-outline')
+    pixels=source.load()
+    for y in range(rows):
+        y0=top+round(y*crop_height/rows)
+        y1=top+round((y+1)*crop_height/rows)
+        if y1<=bag_top or y0>=bag_bottom:continue
+        for x in range(cols):
+            x0=left+round(x*crop_width/cols)
+            x1=left+round((x+1)*crop_width/cols)
+            if x1<=bag_left or x0>=bag_right:continue
+            counts={key:0 for key in bag_colors}
+            for py in range(max(y0,bag_top),min(y1,bag_bottom)):
+                for px in range(max(x0,bag_left),min(x1,bag_right)):
+                    r,g,b=pixels[px,py]
+                    if r>105 and g>75 and b<min(r,g)*0.82:counts['Y']+=1
+                    elif r>g*1.2 and r>b*1.2 and r>70:counts['R']+=1
+                    elif b>r*1.22 and b>g*1.08 and b>65:counts['B']+=1
+                    elif g>r*1.16 and g>b*1.05 and g>55:counts['G']+=1
+            key=max(counts,key=counts.get)
+            # The yellow belt is narrower than one cell; preserve its strong
+            # local signal even when adjacent red/green pixels are more numerous.
+            if x<=25 and counts['Y']>=(x1-x0)*(y1-y0)*0.18 and counts['Y']>=counts[key]*0.35:
+                key='Y'
+            if counts[key]>=max(3,(x1-x0)*(y1-y0)*0.13):
+                cells[y][x]=('#',bag_colors[key])
+    # Dark clasp/folds remain visible between photo-derived colored runs.
+    for line in cells:
+        colored=[x for x,(_,kind) in enumerate(line) if kind in bag_colors.values()]
+        if len(colored)>=2:
+            for x in range(min(colored),max(colored)+1):
+                if line[x][1] not in bag_colors.values():line[x]=('#','bag-shadow')
     return cells
 
 def render(data,light=False):
@@ -135,8 +150,8 @@ def render(data,light=False):
     .fg {{fill:{fg}}}.key {{fill:{key}}}.value {{fill:{val}}}.cc {{fill:{cc}}}.green {{fill:#3fb950}}.red {{fill:#f85149}}
     .portrait-row {{font-size:11px;letter-spacing:0}}
     .scene {{fill:{'#596777' if dark else '#a8b0b9'}}}.person {{fill:{fg}}}
-    .bag-red {{fill:#e24250}}.bag-yellow {{fill:#e8c64a}}.bag-blue {{fill:#448ee0}}.bag-green {{fill:#36ad69}}
-    .bag-outline {{fill:{'#9aa8b5' if dark else '#536171'}}}.bag-strap {{fill:{'#778391' if dark else '#46515d'}}}
+    .bag-red {{fill:#bd4b71}}.bag-yellow {{fill:#e5c45b}}.bag-blue {{fill:#4b70b9}}.bag-green {{fill:#3ba36b}}
+    .bag-shadow {{fill:{'#71808f' if dark else '#66727f'}}}
     </style><rect width="985" height="530" rx="15" fill="{bg}"/>''']
     # Large portrait frame, close to the height of the reference profile.
     frame='#30363d' if dark else '#d0d7de'
