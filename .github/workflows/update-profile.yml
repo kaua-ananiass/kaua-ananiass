@@ -7,7 +7,7 @@ on:
     branches: [main]
     paths:
       - 'build_profile.py'
-      - 'portrait-source.jpg'
+      - 'portrait-pixels.txt'
       - '.github/workflows/update-profile.yml'
 permissions:
   contents: write

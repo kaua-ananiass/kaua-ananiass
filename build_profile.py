@@ -59,7 +59,7 @@ def stats():
         data.update(loc_add=added,loc_del=removed,loc_net=added-removed)
     return data
 
-def ascii_portrait():
+def photo_portrait():
     # Frame the head, torso and bag like a portrait; never stretch the source.
     source=Image.open(ROOT/'portrait-source.jpg').convert('RGB')
     w,h=source.size
@@ -136,6 +136,29 @@ def ascii_portrait():
         if len(colored)>=2:
             for x in range(min(colored),max(colored)+1):
                 if line[x][1] not in bag_colors.values():line[x]=('#','bag-shadow')
+    return cells
+
+def ascii_portrait():
+    """Read the hand-editable 51x39 portrait grid used by both SVG themes."""
+    rows=(ROOT/'portrait-pixels.txt').read_text(encoding='utf-8').splitlines()
+    if len(rows)!=39:
+        raise ValueError(f'portrait-pixels.txt precisa de 39 linhas; encontrei {len(rows)}.')
+    colors={'R':'bag-red','Y':'bag-yellow','B':'bag-blue','G':'bag-green','K':'bag-shadow'}
+    cells=[]
+    for number,row in enumerate(rows,1):
+        prefix=f'{number:02d}|'
+        if not row.startswith(prefix) or not row.endswith('|'):
+            raise ValueError(f'Linha {number:02d}: use o formato {prefix}<51 pixels>|.')
+        pixels=row[len(prefix):-1]
+        if len(pixels)!=51:
+            raise ValueError(f'Linha {number:02d}: precisa de 51 pixels; encontrei {len(pixels)}.')
+        line=[]
+        for column,symbol in enumerate(pixels,1):
+            if symbol in colors:line.append(('#',colors[symbol]))
+            elif symbol in ' .':line.append((symbol,'scene'))
+            elif symbol in '@%#*+=':line.append((symbol,'person'))
+            else:raise ValueError(f'Pixel inválido na linha {number:02d}, coluna {column:02d}: {symbol!r}.')
+        cells.append(line)
     return cells
 
 def render(data,light=False):
