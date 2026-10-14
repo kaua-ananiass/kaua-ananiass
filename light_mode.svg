@@ -1,39 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="985" height="530" viewBox="0 0 985 530"><style>
     text {font-family:Consolas, 'Liberation Mono',monospace;font-size:15px;white-space:pre;}
     .fg {fill:#24292f}.key {fill:#953800}.value {fill:#0969da}.cc {fill:#7d8590}.green {fill:#3fb950}.red {fill:#f85149}
+    .portrait-row {font-size:11px;letter-spacing:0}
+    .scene {fill:#a8b0b9}.person {fill:#24292f}
+    .bag-red {fill:#e24250}.bag-yellow {fill:#e8c64a}.bag-blue {fill:#448ee0}.bag-green {fill:#36ad69}
     </style><rect width="985" height="530" rx="15" fill="#f6f8fa"/>
 <rect x="14" y="18" width="360" height="494" rx="9" fill="#ffffff" stroke="#d0d7de" stroke-width="1.3"/>
-<g style="font-size:14px;letter-spacing:0px">
-<text x="25" y="48" dy="0" class="fg">++++==============+======================</text>
-<text x="25" y="48" dy="16" class="fg">================#%@@#--==================</text>
-<text x="25" y="48" dy="32" class="fg">==============+@@@@%@# :--=-=============</text>
-<text x="25" y="48" dy="48" class="fg">=-==-===--=---=%*:.-%%---:--------------=</text>
-<text x="25" y="48" dy="64" class="fg">--------------:.+=+%%@@@@#:--------------</text>
-<text x="25" y="48" dy="80" class="fg">--------------..*%@@@@@@@@*:-::----------</text>
-<text x="25" y="48" dy="96" class="fg">:::::::::::::::-#%@@@@@@@@@::::::::::::::</text>
-<text x="25" y="48" dy="112" class="fg">::::::::::::::::%@@@@@@@@@%:..::.:::::.  </text>
-<text x="25" y="48" dy="128" class="fg">  ..............#@@@@@@@@@@. ......      </text>
-<text x="25" y="48" dy="144" class="fg">              . #@@@@@@@@@@.             </text>
-<text x="25" y="48" dy="160" class="fg">                %@@@@%%@@@@              </text>
-<text x="25" y="48" dy="176" class="fg">               *@@@@*+%%%%%              </text>
-<text x="25" y="48" dy="192" class="fg">              #@@@@% =%#%%@.             </text>
-<text x="25" y="48" dy="208" class="fg">              #@@@@@#@@@@@%              </text>
-<text x="25" y="48" dy="224" class="fg">=: -=+=======-+@@@@@@@@@@@*:::-------====</text>
-<text x="25" y="48" dy="240" class="fg">: -==+++++++++=*@@@@@@@@@@++**********+++</text>
-<text x="25" y="48" dy="256" class="fg"> -=+==+++++++==*@@@@@@@@@*=++++++++++++++</text>
-<text x="25" y="48" dy="272" class="fg">===+++++++++++=#@@@@@@@@@+-=======+++++++</text>
-<text x="25" y="48" dy="288" class="fg">+++**+++++++++=%@@@@@@@@%-=======+++++++*</text>
-<text x="25" y="48" dy="304" class="fg">++++++++++++++=%@@@@@@@@%====++++++++*+++</text>
-<text x="25" y="48" dy="320" class="fg">+++++++++++++++@@@@@@@@@@====+++++++++***</text>
-<text x="25" y="48" dy="336" class="fg">++++++++*++++++%@@@@@@@@@*==+++++++==++++</text>
-<text x="25" y="48" dy="352" class="fg">+*++++++++++++=*@@@@@@@@@*==+=+++++++++**</text>
-<text x="25" y="48" dy="368" class="fg">+++***++++++++=*@@@@@@@@@*====++++*******</text>
-<text x="25" y="48" dy="384" class="fg">****++******+++#@@@@@@@@@#==++******+++++</text>
-<text x="25" y="48" dy="400" class="fg">#**#***#####*++*@@@@@@@@@@+++******####%%</text>
-<text x="25" y="48" dy="416" class="fg">###*#********##%@@@@@@@@@@@%%@@@@@@@@%@@@</text>
-<text x="25" y="48" dy="432" class="fg">**********#*+=**++==#@%%%%%%##%###*******</text>
-<text x="25" y="48" dy="448" class="fg">*****########*++***++#*+*******+=+*#*###*</text>
-</g>
+<text x="25" y="40" dy="0.0" class="portrait-row"><tspan class="scene">                                                   </tspan></text>
+<text x="25" y="40" dy="12.1" class="portrait-row"><tspan class="scene">                                                   </tspan></text>
+<text x="25" y="40" dy="24.2" class="portrait-row"><tspan class="scene">                 </tspan><tspan class="person">##%#</tspan><tspan class="scene">   .                          </tspan></text>
+<text x="25" y="40" dy="36.3" class="portrait-row"><tspan class="scene">               </tspan><tspan class="person">%%@@@@@%#</tspan><tspan class="scene">...                        </tspan></text>
+<text x="25" y="40" dy="48.4" class="portrait-row"><tspan class="scene">             </tspan><tspan class="person">%@@%%%%@%@@@</tspan><tspan class="scene">....                      </tspan></text>
+<text x="25" y="40" dy="60.5" class="portrait-row"><tspan class="scene">            </tspan><tspan class="person">%%@@%%%%*#@@@+</tspan><tspan class="scene">.. .                     </tspan></text>
+<text x="25" y="40" dy="72.6" class="portrait-row"><tspan class="scene">            </tspan><tspan class="person">@@*</tspan><tspan class="scene">..</tspan><tspan class="person">**</tspan><tspan class="scene">..</tspan><tspan class="person">+%@@</tspan><tspan class="scene"> . .  ..                  </tspan></text>
+<text x="25" y="40" dy="84.7" class="portrait-row"><tspan class="scene">            </tspan><tspan class="person">%%+=</tspan><tspan class="scene">.....</tspan><tspan class="person">*###*</tspan><tspan class="scene">.                        </tspan></text>
+<text x="25" y="40" dy="96.8" class="portrait-row"><tspan class="scene">           ...</tspan><tspan class="person">%#</tspan><tspan class="scene">..  ..</tspan><tspan class="person">=#%%%%%%%%</tspan><tspan class="scene"> .                 </tspan></text>
+<text x="25" y="40" dy="108.9" class="portrait-row"><tspan class="scene">             ... ..</tspan><tspan class="person">*%%%@@@@@@@@@%</tspan><tspan class="scene">.                 </tspan></text>
+<text x="25" y="40" dy="121.0" class="portrait-row"><tspan class="scene">           ... </tspan><tspan class="person">###@@%%@@%@@@@@@@@</tspan><tspan class="scene"> .                </tspan></text>
+<text x="25" y="40" dy="133.1" class="portrait-row"><tspan class="scene">              </tspan><tspan class="person">*##%@%%%@%%%@@@@@@@@</tspan><tspan class="scene"> .               </tspan></text>
+<text x="25" y="40" dy="145.2" class="portrait-row"><tspan class="scene">              </tspan><tspan class="person">=*</tspan><tspan class="scene">.</tspan><tspan class="person">#%%%@@%%@@@@@@@@@@</tspan><tspan class="scene">..              </tspan></text>
+<text x="25" y="40" dy="157.3" class="portrait-row"><tspan class="scene">               </tspan><tspan class="person">#%%@%%%@%@@@@@@@@@@@</tspan><tspan class="scene"> .              </tspan></text>
+<text x="25" y="40" dy="169.4" class="portrait-row"><tspan class="scene">              </tspan><tspan class="person">%@@@@%%%@@@@@@@@@@@@@</tspan><tspan class="scene">..              </tspan></text>
+<text x="25" y="40" dy="181.5" class="portrait-row"><tspan class="scene">               </tspan><tspan class="person">%@@%%%%@@@@@@@@@@@@@</tspan><tspan class="scene">..              </tspan></text>
+<text x="25" y="40" dy="193.6" class="portrait-row"><tspan class="scene">              .</tspan><tspan class="person">%@%%@@%@@@@@@@@@@@@@</tspan><tspan class="scene">..              </tspan></text>
+<text x="25" y="40" dy="205.7" class="portrait-row"><tspan class="scene">              </tspan><tspan class="person">#@@%@@@@@@@@@@@@@@@@@</tspan><tspan class="scene"> .              </tspan></text>
+<text x="25" y="40" dy="217.8" class="portrait-row"><tspan class="scene">              .</tspan><tspan class="person">@%@@@@@@@@@@@@@@@@@@</tspan><tspan class="scene"> .              </tspan></text>
+<text x="25" y="40" dy="229.9" class="portrait-row"><tspan class="scene">              .</tspan><tspan class="person">%@@@@@@@@@@@@@@@@@@@*</tspan><tspan class="scene">.              </tspan></text>
+<text x="25" y="40" dy="242.0" class="portrait-row"><tspan class="scene">              .</tspan><tspan class="person">@@@@@@@@@@@@@@@@@@@@</tspan><tspan class="scene"> .              </tspan></text>
+<text x="25" y="40" dy="254.1" class="portrait-row"><tspan class="scene">               </tspan><tspan class="person">@@@@@@%@@@@@@@@@@@@@#</tspan><tspan class="scene">.              </tspan></text>
+<text x="25" y="40" dy="266.2" class="portrait-row"><tspan class="scene">              </tspan><tspan class="person">%@@@@@%@@@%%@@@@@@@@@*</tspan><tspan class="bag-blue">#</tspan><tspan class="scene">              </tspan></text>
+<text x="25" y="40" dy="278.3" class="portrait-row"><tspan class="scene">             .</tspan><tspan class="person">@@@@@%@@@%</tspan><tspan class="bag-red">#</tspan><tspan class="bag-yellow">#</tspan><tspan class="bag-red">#@@</tspan><tspan class="person">##</tspan><tspan class="bag-red">@@@</tspan><tspan class="person">%=</tspan><tspan class="bag-blue">#</tspan><tspan class="scene">              </tspan></text>
+<text x="25" y="40" dy="290.4" class="portrait-row"><tspan class="scene">            .</tspan><tspan class="person">#@@@@@@@@+</tspan><tspan class="bag-red">##</tspan><tspan class="person">%%%%##</tspan><tspan class="bag-red">@@@@@</tspan><tspan class="bag-blue">#</tspan><tspan class="scene">              </tspan></text>
+<text x="25" y="40" dy="302.5" class="portrait-row"><tspan class="scene">           </tspan><tspan class="person">*@%%%@@@@@%</tspan><tspan class="scene">.</tspan><tspan class="bag-blue">#</tspan><tspan class="person">=</tspan><tspan class="bag-blue">@</tspan><tspan class="person">%%#*#%%%%+#</tspan><tspan class="scene">              </tspan></text>
+<text x="25" y="40" dy="314.6" class="portrait-row"><tspan class="scene">          .</tspan><tspan class="person">%%@@@@@@@@*</tspan><tspan class="scene">..</tspan><tspan class="bag-green">##@</tspan><tspan class="person">#</tspan><tspan class="bag-green">@</tspan><tspan class="person">####</tspan><tspan class="bag-blue">@@#</tspan><tspan class="scene">.              </tspan></text>
+<text x="25" y="40" dy="326.7" class="portrait-row"><tspan class="scene">          </tspan><tspan class="person">%@@@@@@@@@@*</tspan><tspan class="scene">..</tspan><tspan class="person">**##</tspan><tspan class="bag-green">@</tspan><tspan class="person">##</tspan><tspan class="bag-green">@@@@@</tspan><tspan class="bag-blue">#</tspan><tspan class="scene">.             </tspan></text>
+<text x="25" y="40" dy="338.8" class="portrait-row"><tspan class="scene">         ..</tspan><tspan class="person">@@@@@@@@@@%#%%%%%%###%%%#</tspan><tspan class="bag-blue">#</tspan><tspan class="scene">              </tspan></text>
+<text x="25" y="40" dy="350.9" class="portrait-row"><tspan class="scene">          .</tspan><tspan class="person">%@@@@@@@%%@@@@@@@@@@@@@#</tspan><tspan class="bag-blue">##</tspan><tspan class="scene">              </tspan></text>
+<text x="25" y="40" dy="363.0" class="portrait-row"><tspan class="scene">.    .    .</tspan><tspan class="person">#@@@%%%%%%@@@@@@@@@@@@@%#</tspan><tspan class="scene">    .    .    .</tspan></text>
+<text x="25" y="40" dy="375.1" class="portrait-row"><tspan class="scene">    .    .   </tspan><tspan class="person">@@%%@@@@@@@@@@@@@@@@@</tspan><tspan class="scene">.    .    .    . </tspan></text>
+<text x="25" y="40" dy="387.2" class="portrait-row"><tspan class="scene">   .    .    .</tspan><tspan class="person">%@@@@@@@@@@@@@@@@@@@</tspan><tspan class="scene">    .    .    .  </tspan></text>
+<text x="25" y="40" dy="399.3" class="portrait-row"><tspan class="scene">  .    .    . </tspan><tspan class="person">%%%%@@@@@@@@@@@@@@</tspan><tspan class="scene">.    .    .    .   </tspan></text>
+<text x="25" y="40" dy="411.4" class="portrait-row"><tspan class="scene"> .    .    .  </tspan><tspan class="person">%%@@@@@@@@@@@@@@@</tspan><tspan class="scene">.    .    .    .    </tspan></text>
+<text x="25" y="40" dy="423.5" class="portrait-row"><tspan class="scene">.    .    .   </tspan><tspan class="person">%%%%@@@@@@@@@@@@@@</tspan><tspan class="scene">   .    .    .    .</tspan></text>
+<text x="25" y="40" dy="435.6" class="portrait-row"><tspan class="scene">    .    .   </tspan><tspan class="person">##%%%@@@@@@@@@@@@@@</tspan><tspan class="scene">  .    .    .    . </tspan></text>
+<text x="25" y="40" dy="447.7" class="portrait-row"><tspan class="scene">   .    .    </tspan><tspan class="person">#%@@@@@@@@@@@@@@@@</tspan><tspan class="scene">  .    .    .    .  </tspan></text>
+<text x="25" y="40" dy="459.8" class="portrait-row"><tspan class="scene">  .    .    .</tspan><tspan class="person">%@%@@@@@@@@@@@@@@@</tspan><tspan class="scene"> .    .   </tspan><tspan class="person">=</tspan><tspan class="scene">.    .   </tspan></text>
 <text x="390" y="30" class="fg">kaua@ananiass ----------------------------------------------</text>
 <text x="390" y="50" class="cc">. </text>
 <text x="409" y="50"><tspan class="key">OS</tspan><tspan class="fg">:</tspan><tspan class="cc"> ............................................... </tspan><tspan class="value">Windows</tspan></text>
@@ -65,7 +76,7 @@
 <text x="390" y="390" class="cc">. </text>
 <text x="409" y="390"><tspan class="key">GameDev</tspan><tspan class="fg">:</tspan><tspan class="cc"> ........................... </tspan><tspan class="value">Duka Gamedev / itch.io</tspan></text>
 <text x="390" y="450" class="fg">- GitHub Stats ------------------------------------------------</text>
-<text x="390" y="470"><tspan class="cc">. </tspan><tspan class="key">Repos</tspan><tspan class="fg">: </tspan><tspan class="cc">.... </tspan><tspan class="value">3</tspan><tspan class="fg"> {</tspan><tspan class="key">Contributed</tspan><tspan class="fg">: </tspan><tspan class="value">344</tspan><tspan class="fg">} | </tspan><tspan class="key">Stars</tspan><tspan class="fg">: </tspan><tspan class="cc">........ </tspan><tspan class="value">2</tspan></text>
-<text x="390" y="490"><tspan class="cc">. </tspan><tspan class="key">Commits</tspan><tspan class="fg">: </tspan><tspan class="cc">.............. </tspan><tspan class="value">37</tspan><tspan class="fg"> | </tspan><tspan class="key">Followers</tspan><tspan class="fg">: </tspan><tspan class="cc">....... </tspan><tspan class="value">1</tspan></text>
-<text x="390" y="510"><tspan class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan><tspan class="fg">: </tspan><tspan class="value">5,583</tspan><tspan class="fg"> ( </tspan><tspan class="green">6,812++</tspan><tspan class="fg">,  </tspan><tspan class="red">1,229--</tspan><tspan class="fg"> )</tspan></text>
+<text x="390" y="470"><tspan class="cc">. </tspan><tspan class="key">Repos</tspan><tspan class="fg">: </tspan><tspan class="cc">.... </tspan><tspan class="value">3</tspan><tspan class="fg"> {</tspan><tspan class="key">Contributed</tspan><tspan class="fg">: </tspan><tspan class="value">345</tspan><tspan class="fg">} | </tspan><tspan class="key">Stars</tspan><tspan class="fg">: </tspan><tspan class="cc">........ </tspan><tspan class="value">2</tspan></text>
+<text x="390" y="490"><tspan class="cc">. </tspan><tspan class="key">Commits</tspan><tspan class="fg">: </tspan><tspan class="cc">.............. </tspan><tspan class="value">38</tspan><tspan class="fg"> | </tspan><tspan class="key">Followers</tspan><tspan class="fg">: </tspan><tspan class="cc">....... </tspan><tspan class="value">1</tspan></text>
+<text x="390" y="510"><tspan class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan><tspan class="fg">: </tspan><tspan class="value">5,625</tspan><tspan class="fg"> ( </tspan><tspan class="green">6,874++</tspan><tspan class="fg">,  </tspan><tspan class="red">1,249--</tspan><tspan class="fg"> )</tspan></text>
 </svg>
